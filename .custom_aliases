@@ -1,0 +1,5 @@
+# APT
+alias update='sudo apt update && sudo apt upgrade'
+
+# GIT
+alias g='git'

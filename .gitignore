@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except...
+!.gitignore
+!.custom_aliases
+!.bashrc
+!.gitconfig
+!.config/nvim/**

@@ -1,0 +1,7 @@
+[user]
+	name = Leandro Fração
+	email = ldfracao@protonmail.com
+[alias]
+	st = status
+	cfg = config --global
+	br = branch
