@@ -2,6 +2,12 @@
 	name = Leandro Fração
 	email = ldfracao@protonmail.com
 [alias]
-	st = status
 	cfg = config --global
+	cfl = config --list
+	st = status
+	ad = add
 	br = branch
+	ch = checkout
+	cm = commit -m
+	lg = log --all --decorate --oneline --graph
+
