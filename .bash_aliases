@@ -2,6 +2,8 @@
 alias md='mkdir'
 alias xo='xdg-open'
 alias so='source'
+alias clipc='xclip -selection clipboard'
+alias clipp='xclip -selection clipboard -o'
 
 # NEOVIM
 alias nv='nvim'
@@ -73,4 +75,4 @@ get_git_branch() {
 }
 
 PS1=" ${FG_BLUE}${LOW_RIGHT_TRI}${FULL_BLOCK}${YELLOW_BLUE}${COMPUTER}\h${RESET}${FG_BLUE}${UPPER_LEFT_TRI}\$(get_git_branch)\n"
-PS1+="${FG_BLUE}${LOW_RIGHT_TRI}${YELLOW_BLUE} ${USER_ICON} \u ${FOLDER}  \w${RESET}${FG_BLUE}${UPPER_LEFT_TRI}${FG_WHITE}\n "
+PS1+="${FG_BLUE}${LOW_RIGHT_TRI}${YELLOW_BLUE} ${USER_ICON} \u ${FOLDER}  \w${RESET}${FG_BLUE}${UPPER_LEFT_TRI}${FG_WHITE}\n"

@@ -1,5 +1,9 @@
+local options = {
 -- Display options
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-
+	number = true,
+	relativenumber = true,
+	cursorline = true
+}
+for key, value in pairs(options) do
+	vim.opt[key] = value
+end
