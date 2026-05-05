@@ -30,6 +30,11 @@ alias dfs='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 LOW_RIGHT_TRI=$'\u25e2'
 UPPER_LEFT_TRI=$'\u25e4'
 FULL_BLOCK=$'\u2588'
+LIGHT_SHADE=$'\u2591'
+MEDIUM_SHADE=$'\u2592'
+DARK_SHADE=$'\u2593'
+
+# Icons
 FOLDER=$'\U1f5c0'
 COMPUTER=$'\U1f4bb'
 USER_ICON=$'\uf007' # Private use area character
@@ -74,5 +79,6 @@ get_git_branch() {
     fi
 }
 
-PS1=" ${FG_BLUE}${LOW_RIGHT_TRI}${FULL_BLOCK}${YELLOW_BLUE}${COMPUTER}\h${RESET}${FG_BLUE}${UPPER_LEFT_TRI}\$(get_git_branch)\n"
-PS1+="${FG_BLUE}${LOW_RIGHT_TRI}${YELLOW_BLUE} ${USER_ICON} \u ${FOLDER}  \w${RESET}${FG_BLUE}${UPPER_LEFT_TRI}${FG_WHITE}\n"
+PS1="  ${FG_BLUE}${LOW_RIGHT_TRI}${FULL_BLOCK}${YELLOW_BLUE}${COMPUTER}\h${RESET}${FG_BLUE}${UPPER_LEFT_TRI}\$(get_git_branch)\n"
+PS1+=" ${FG_BLUE}${LOW_RIGHT_TRI}${YELLOW_BLUE} ${USER_ICON} \u ${FOLDER}  \w${RESET}${FG_BLUE}${UPPER_LEFT_TRI}\n"
+PS1+="${FG_BLUE}${LOW_RIGHT_TRI}${FULL_BLOCK}${YELLOW_BLUE}\$${FG_BLUE}${FULL_BLOCK}${RESET}${FG_BLUE}${UPPER_LEFT_TRI}${FG_BLUE}"
