@@ -29,8 +29,8 @@ local keymaps =	{
 	{"v", "<Leader>c", function() vim.cmd.normal("gc") end, { desc = "Toggle comment line" }},
 -- Functions (user_functions.lua)
 	{"n", "<Leader>ma", user_functions.jump_to_mark, { desc = "Jump to exact mark using `" }},
-	{{"n", "v"}, "<Leader>yr", user_functions.yank_into_register, { desc = "Yank into register" }},
-	{{"n", "v"}, "<Leader>pr", user_functions.paste_from_register, { desc = "Yank into register" }},
+	{"v", "<Leader>yr", user_functions.yank_into_register, { desc = "Yank into register" }},
+	{{"n", "v"}, "<Leader>pr", user_functions.paste_from_register, { desc = "Paste from register" }},
 }
 
 for _, value in ipairs(keymaps) do
