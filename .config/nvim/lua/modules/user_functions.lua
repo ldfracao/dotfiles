@@ -16,14 +16,14 @@ function M.jump_to_mark()
             vim.api.nvim_echo({{"Jumped to mark `" .. key, "Normal"}}, false, {})
             return
         else
-	    vim.api.nvim_echo({{"Error: " .. err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, false, {})
+	    vim.api.nvim_echo({{err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, false, {})
 	end
             vim.fn.getchar(-1)
     end
 end
 
 function M.yank_into_register()
-    vim.api.nvim_echo({{"Yank into register <Esc> to cancel: ", "Normal"}}, false, {})
+	vim.api.nvim_echo({{"Yank into register <Esc> to cancel: ", "Normal"}}, false, {})
         local key = vim.fn.getchar(-1, { number = false })
         if key == "\27" then
             vim.api.nvim_echo({{"Cancelled.", "Normal"}}, false, {})
@@ -33,13 +33,13 @@ function M.yank_into_register()
 	if ok then
 	    return
 	else
-	    vim.api.nvim_echo({{"Error: " .. err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, true, {})
+	    vim.api.nvim_echo({{err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, false, {})
 	end
 	vim.fn.getchar(-1)
 end
 
 function M.paste_from_register()
-    vim.api.nvim_echo({{"Paste from register <Esc> to cancel: ", "Normal"}}, false, {})
+	vim.api.nvim_echo({{"Paste from register <Esc> to cancel: ", "Normal"}}, false, {})
         local key = vim.fn.getchar(-1, { number = false })
         if key == "\27" then
             vim.api.nvim_echo({{"Cancelled.", "Normal"}}, false, {})
@@ -49,7 +49,7 @@ function M.paste_from_register()
 	if ok then
 	    return
 	else
-	    vim.api.nvim_echo({{"Error: " .. err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, true, {})
+	    vim.api.nvim_echo({{err, "ErrorMsg"}, {" Press any key to continue...", "Comment"}}, false, {})
 	end
 	vim.fn.getchar(-1)
 end

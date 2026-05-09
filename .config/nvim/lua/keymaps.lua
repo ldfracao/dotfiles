@@ -13,6 +13,8 @@ local keymaps =	{
 	{"n", "<Leader>q", ":quit<CR>", { desc = "Exits neovim" }},
 	{"n", "<Leader>r", ":restart<CR>", { desc = "Restarts neovim" }},
 	{"n", "<Leader>me", ":messages<CR>", { desc = "Show messages" }},
+	{"n", "<Leader>sh", ":helpgrep ", { desc = "Search help using helpgrep" }},
+	{"n", "<Leader>er", ":e $MYVIMRC<CR>", { desc = "Edit $MYVIMRC" }},
 -- Navigation 
 	{"n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" }},
 	{"n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the bottom window" }},
@@ -20,9 +22,13 @@ local keymaps =	{
 	{"n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" }},
 	{"n", "<C-d>", "<C-d>zz", { desc = "Centers the line under the cursor after half scroll up" }},
 	{"n", "<C-u>", "<C-u>zz", { desc = "Centers the line under the cursor after half scroll down" }},
-	{"n", "<C-b>", "<C-b>zz", { desc = "Centers the line under the cursor after scroll down" }},
+	{"n", "<C-b>", "<C-b>zz", { desc = "Centers the line under the cursor after scroll up" }},
 	{"n", "<C-f>", "<C-f>zz", { desc = "Centers the line under the cursor after scroll down" }},
--- Diagnostics
+	{"n", "]q", ":cnext<CR>", { desc = "Next item in the quickfix list" }},
+	{"n", "[q", ":cprev<CR>", { desc = "Previous item in the quickfix list" }},
+	{"n", "]b", ":bnext<CR>", { desc = "Next item in the buffer list" }},
+	{"n", "[b", ":bprev<CR>", { desc = "Previous item in the buffer list" }},
+-- Diagnostics 
 	{"n", "<Leader>f", ":lua vim.diagnostic.open_float()<CR>", { desc = "Opens float diagnostics for the current line" }},
 -- Toggle comments
 	{"n", "<Leader>c", function() vim.cmd.normal("gcc") end, { desc = "Toggle comment line" }},
